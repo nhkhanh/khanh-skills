@@ -94,7 +94,6 @@ Once investigation shows something is actually broken, file the issue first (sym
 - **PR target:** {{BASE_BRANCH}}. Never infer the base from the repo's default branch; check the repo's contributing docs.
 - **Issue keywords:** {{Choose one: "Use `Relates to #N`; issues stay open until validated in production" OR "Use `Fixes #N`"}}.
 - **Commit identity:** {{Name <email>}}. If the environment injects `GIT_AUTHOR_*`/`GIT_COMMITTER_*` variables, they override `git config`; set all four inline on every commit, rebase, amend and cherry-pick, and check with `git log -1 --format='%an <%ae> | %cn <%ce>'`.
-- **AI-assisted marker (optional):** prefix commit subjects created by Claude Code with `{{[cc]}}`.
 - Stage explicit paths, never `git add -A`. After a commit hook (lint-staged, formatters) runs, confirm the committed bytes are what you verified: `git show --stat HEAD`.
 
 ## Development
