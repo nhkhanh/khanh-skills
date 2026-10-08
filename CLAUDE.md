@@ -54,6 +54,7 @@ Reading anything is always fine.
   - Issue/PR: `[repo#123](https://github.com/{{ORG}}/repo/issues/123)`
   - Commit: `[abc1234](<remote>/commit/abc1234)`; look the remote up with `git remote get-url origin`, never infer it from the directory name.
   - Local file: a path relative to the opened workspace root, e.g. `[src/app.ts:42](src/app.ts#L42)`.
+- Link every place the user may need to go, not only identifiers: the console, dashboard or form behind each step they must do by hand (cloud/DNS/registrar panels, API-token pages, removal or support forms), inline on that step and again in "Next". Prefer the deepest stable URL (the API-tokens page, not the dashboard home). Check each with `curl -sIL` before citing it; a page behind login or bot protection answers 403 or redirects, so label it "behind login, not verified past it". Never invent a deep link — link the closest verified page and give the menu path from there. A hand-off with only a menu path costs the user a round trip to ask for the URL.
 - Ranges (`#10–#15`) and bare SHAs cannot be clicked; expand them.
 - When posting into GitHub, a bare `#123` resolves against the repo you post in. Qualify every cross-repo reference, every token: `other-repo#12 / other-repo#13`, never `other-repo#12 / #13`.
 
