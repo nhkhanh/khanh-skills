@@ -24,6 +24,7 @@ A local clock that is days behind makes cached tool output (e.g. `gh`) look fres
 | Document | Description |
 |----------|-------------|
 | [rules/MEMORY.md](./rules/MEMORY.md) | Index of project rules; one line per rule |
+| [rules/numbering.md](./rules/numbering.md) | Numbering items across a thread; every response and skill follows it |
 | [rules/working-agreements.md](./rules/working-agreements.md) | {{Optional: the long form of the rules below}} |
 | {{ARCHITECTURE.md}} | {{Structure, data flow}} |
 | {{DEVELOPMENT.md}} | {{Local setup, workflow}} |
@@ -72,9 +73,9 @@ Mark non-trivial claims **verified** (read from a tool this session), **assumpti
 
 ### 5. Close substantive responses with a numbered "Next"
 
-- Name **one** recommended action as item 1; order by consequence-if-delayed, not effort.
+- Name **one** recommended action as the first item; order by consequence-if-delayed, not effort.
 - Separate *actionable now* from *blocked on a person* (name the person).
-- Number every suggested item, option or open question, in one continuous sequence per response, so the user can reply "do 2 and 3, skip 1".
+- Number every item the user might act on, in the body and in "Next", from one sequence that runs for the whole thread, so the user can reply "do 2 and 3, skip 1". Continue from the highest number used earlier; never restart at 1 or reuse a number. Write `- **7.** …`, never a markdown ordered list, which renumbers. Full rule, which every skill follows: [rules/numbering.md](./rules/numbering.md).
 - "Nothing to do, waiting on X" is a valid answer. Do not invent work.
 
 ### 6. Feed insight back into rules, in the same session
